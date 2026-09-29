@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Infographic và Video</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .infographic {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        .video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            left: 0;
+            top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Infographic và Video</h1>
+        <p>Nội dung đa phương tiện – Lab 5</p>
+    </header>
+
+    <main>
+
+        <!-- Infographic -->
+        <section>
+            <h2>Infographic</h2>
+
+            <p>
+                Infographic được sử dụng để trình bày thông tin
+                một cách trực quan và dễ hiểu.
+            </p>
+
+            <img
+                src="Lab05_Ex2.1.png"
+                alt="Infographic của nhiệm vụ 2"
+                class="infographic"
+            >
+        </section>
+
+        <!-- Video -->
+        <section>
+            <h2>Video</h2>
+
+            <p>
+                Video minh họa cho nội dung của bài thực hành.
+            </p>
+
+            <div class="video">
+                <iframe
+                    src="https://www.youtube.com/embed/WcF0pT-nnro"
+                    title="YouTube video"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 – Lab 5. Infographic và video thuộc nội dung
+        của bài thực hành. Mã nguồn có sự hỗ trợ của GitHub Copilot.
+    </footer>
+
+</body>
+</html>
