@@ -1,58 +1,132 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Infographic và Video</title>
+    <title>CT005 – Lab05 – Huỳnh Đức Huy</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f5f5f5;
+            background-color: #f3f4f6;
             color: #222;
+            line-height: 1.6;
         }
 
         header {
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 0;
+            color: #ddd;
         }
 
         main {
             max-width: 1000px;
-            margin: 30px auto;
+            margin: 35px auto;
             padding: 0 20px;
         }
 
         section {
-            background: white;
-            padding: 25px;
+            background-color: white;
+            padding: 30px;
             margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
         }
 
         h2 {
             margin-top: 0;
+            color: #222;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
 
+        /* Thông tin cá nhân */
+        .profile {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .profile-item {
+            background-color: #f5f5f5;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .profile-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Sản phẩm */
+        .product {
+            margin-bottom: 35px;
+        }
+
+        .product:last-child {
+            margin-bottom: 0;
+        }
+
+        .product h3 {
+            margin-bottom: 8px;
+        }
+
+        .product-description {
+            color: #666;
+        }
+
+        /* PDF */
+        .pdf-link {
+            display: inline-block;
+            background-color: #222;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .pdf-link:hover {
+            background-color: #444;
+        }
+
+        /* Infographic */
         .infographic {
             width: 100%;
             max-width: 900px;
             display: block;
-            margin: auto;
-            border-radius: 8px;
+            margin: 20px auto 0;
+            border-radius: 10px;
         }
 
+        /* Video */
         .video {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            margin-top: 20px;
+            border-radius: 10px;
         }
 
         .video iframe {
@@ -66,9 +140,24 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             color: #666;
             font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .profile {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -76,51 +165,109 @@
 <body>
 
     <header>
-        <h1>Infographic và Video</h1>
-        <p>Nội dung đa phương tiện – Lab 5</p>
+        <h1>CT005 – Lab05</h1>
+        <p>Trang giới thiệu cá nhân và các sản phẩm thực hành</p>
     </header>
 
     <main>
 
-        <!-- Infographic -->
+        <!-- Thông tin cá nhân -->
         <section>
-            <h2>Infographic</h2>
+            <h2>Thông tin cá nhân</h2>
 
-            <p>
-                Infographic được sử dụng để trình bày thông tin
-                một cách trực quan và dễ hiểu.
-            </p>
+            <div class="profile">
 
-            <img
-                src="Lab05_Ex2.1.png"
-                alt="Infographic của nhiệm vụ 2"
-                class="infographic"
-            >
+                <div class="profile-item">
+                    <strong>Họ tên</strong>
+                    Huỳnh Đức Huy
+                </div>
+
+                <div class="profile-item">
+                    <strong>MSSV</strong>
+                    B2605344
+                </div>
+
+                <div class="profile-item">
+                    <strong>Lớp học phần</strong>
+                    DI26D1A2
+                </div>
+
+            </div>
         </section>
 
-        <!-- Video -->
+
+        <!-- Các sản phẩm -->
         <section>
-            <h2>Video</h2>
+            <h2>Sản phẩm thực hành Lab05</h2>
 
-            <p>
-                Video minh họa cho nội dung của bài thực hành.
-            </p>
+            <!-- Sản phẩm 1 -->
+            <div class="product">
+                <h3>1. Nhiệm vụ 1.2 – File PDF</h3>
 
-            <div class="video">
-                <iframe
-                    src="https://www.youtube.com/embed/WcF0pT-nnro"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
+                <p class="product-description">
+                    Đây là sản phẩm PDF được thực hiện trong nhiệm vụ 1.2
+                    của bài thực hành Lab05.
+                </p>
+
+                <a
+                    href="Lab05_Ex1.2.pdf"
+                    target="_blank"
+                    class="pdf-link">
+                    Xem file PDF
+                </a>
             </div>
+
+
+            <!-- Sản phẩm 2 -->
+            <div class="product">
+                <h3>2. Nhiệm vụ 2.1 – Infographic</h3>
+
+                <p class="product-description">
+                    Infographic trình bày thông tin bằng hình ảnh
+                    nhằm giúp nội dung trực quan và dễ hiểu hơn.
+                </p>
+
+                <img
+                    src="Lab05_Ex2.1.png"
+                    alt="Infographic của nhiệm vụ 2.1"
+                    class="infographic">
+            </div>
+
+
+            <!-- Sản phẩm 3 -->
+            <div class="product">
+                <h3>3. Nhiệm vụ 3.1 – Video YouTube</h3>
+
+                <p class="product-description">
+                    Video minh họa được thực hiện trong bài thực hành
+                    và được nhúng trực tiếp từ YouTube.
+                </p>
+
+                <div class="video">
+                    <iframe
+                        src="https://www.youtube.com/embed/WcF0pT-nnro"
+                        title="Video YouTube – Lab05"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
         </section>
 
     </main>
 
+
     <footer>
-        © 2026 – Lab 5. Infographic và video thuộc nội dung
-        của bài thực hành. Mã nguồn có sự hỗ trợ của GitHub Copilot.
+        <p>
+            © 2026 – CT005 Lab05 – Huỳnh Đức Huy
+        </p>
+
+        <p>
+            Các sản phẩm thuộc nội dung bài thực hành.
+            Trang web được phát triển với sự hỗ trợ của GitHub Copilot.
+        </p>
     </footer>
 
 </body>
 </html>
+```
